@@ -14,7 +14,7 @@ public class App
 			.master("local")
 			.getOrCreate();
 
-		Dataset<Row> df = spark.read().parquet("../../files/part-00000-584fcd61-b0d2-4429-ac49-078fc31e950a.snappy.parquet");
+		Dataset<Row> df = spark.read().parquet("../../../files/part-00000-584fcd61-b0d2-4429-ac49-078fc31e950a.snappy.parquet");
 		df.printSchema();
 		df.createOrReplaceTempView("table");
 		Dataset<Row> sqlDF;
